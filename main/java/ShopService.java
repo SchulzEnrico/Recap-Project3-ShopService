@@ -21,4 +21,12 @@ public class ShopService {
 
         return orderRepo.addOrder(newOrder);
     }
+
+    //Coding: Bestellstatus
+    public List<Order> findByOrderStatus(OrderStatus orderStatus){
+        return orderRepo.getOrders().stream()
+                .filter(s->s.orderStatus().equals(orderStatus)).toList();
+    }
 }
+
+

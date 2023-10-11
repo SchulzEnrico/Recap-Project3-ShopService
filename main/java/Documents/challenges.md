@@ -27,18 +27,18 @@ Wie lautet der Link zu Eurem GitHub-Repository?
 
 [x]
 Fügt einen Bestellstatus zu der Order hinzu (PROCESSING, IN_DELIVERY, COMPLETED), um den Status der Order zu bestimmen.
-[]
-Legt dazu einen neuen Branch an, erstellt und pusht die Commits, erstellt einen Pull-Request, reviewet den PR und merged ihn in den main-Branch.
-
+[x]
+Legt dazu einen neuen Branch an[x], erstellt und pusht die Commits[x], erstellt einen Pull-Request[x], reviewet den PR und merged ihn in den main-Branch[x].
+[x]
 Wie lautet der Link zu Eurem Pull-Request?
 `inputfield`
 
 ## Coding: Bestellstatus
-
+[x]
 Schreibt in dem ShopService eine Methode, die alle Bestellungen mit einem bestimmten Bestellstatus (Parameter) in einer Liste zurückgibt. Nutzt dafür Streams.
 
 ## Coding: Optional Product
-
+[]
 Bearbeitet die Methode 'getProductById' in eurem ProductRepo, sodass sie ein Optional<Product> zurückgibt, wenn das Produkt existiert, andernfalls ein leeres Optional.
 
 ## Coding: Exceptions
