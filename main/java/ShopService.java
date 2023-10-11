@@ -1,6 +1,5 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
+
 import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
@@ -9,15 +8,16 @@ public class ShopService {
     private ProductRepo productRepo = new ProductRepo();
     private OrderRepo orderRepo = new OrderMapRepo();
 
-    public Order addOrder(List<String> productIds) {
-        List<Product> products = new ArrayList<>();
+    //Coding: Exceptions
+    public Order addOrder(List<String> productIds) throws NoSuchElementException {
+        List<Optional<Product>> products = new ArrayList<>();
         for (String productId : productIds) {
-            Product productToOrder = productRepo.getProductById(productId);
-            if (productToOrder == null) {
-                System.out.println("Product mit der Id: " + productId + " konnte nicht bestellt werden!");
-                return null;
+            Optional<Optional<Product>> productToOrder = Optional.ofNullable(productRepo.getProductById(productId));
+            if (productToOrder.isEmpty()) {
+                throw new NoSuchElementException("Product mit der Id: " + productId + " konnte nicht bestellt werden");
             }
-            products.add(productToOrder);
+            Optional<Product> orderProduct = productToOrder.get();
+            products.add(orderProduct);
         }
 
         Order newOrder = new Order(UUID.randomUUID().toString(), products);
@@ -28,7 +28,14 @@ public class ShopService {
     //Coding: Bestellstatus
     public List<Order> findByOrderStatus(OrderStatus orderStatus){
         return orderRepo.getOrders().stream()
-                .filter(s->s.orderStatus().equals(orderStatus)).toList();
+                .filter(s->s.OrderStatus().equals(orderStatus)).toList();
+    }
+
+    //Coding: Lombok
+    public Order updateOrder(String orderID, OrderStatus orderStatus){
+        Order order = orderRepo.getOrderById(orderID).withOrderStatus(orderStatus);
+        orderRepo.addOrder(order);
+        return order;
     }
 }
 
