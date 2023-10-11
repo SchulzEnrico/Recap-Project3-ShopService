@@ -46,17 +46,17 @@ Bearbeitet die Methode 'getProductById' in eurem ProductRepo, sodass sie ein Opt
 Bearbeitet die Methode 'addOrder' im ShopService, sodass eine Exception geworfen wird, wenn das Product nicht vorhanden ist.
 
 ## Coding: Lombok
-[]
+[x]
 Fügt eine 'updateOrder' Methode im ShopService hinzu, die anhand einer orderId und einem neuen Bestellstatus die Order aktualisiert. Nutze dafür Lombok `@With` Annotation.
 
 ## Coding: Bestelldatum
-
+[x]
 Erweitert das Order-Objekt um ein Feld, das den Bestellzeitpunkt speichert. In der 'addOrder' Methode soll dieses Feld mit dem aktuellen Zeitpunkt befüllt werden.
 
 Dieser Zeitpunkt soll vor Gericht als Nachweis verwendet werden können, wenn Besteller\*innen behaupten, die Bestellung gar nicht aufgegeben zu haben. Überlegt Euch, welcher Datentyp dafür am besten geeignet ist - auch wenn Besteller\*innen aus dem Ausland bestellen.
 
 ## Bonus: in Main Repo festlegen
-
+[x]
 Erstellt eine Main-Klasse mit main-Methode. In dieser Methode erstellt eine Instanz des Shop-Services.
 
 Auch die konkreten Instanzen für OrderRepo und ShopRepo sollen hier in der main-Methode erstellt werden. Übergebt sie dem ShopService-Konstruktor. Nutzt die `@RequiredArgsConstructor`-Annotation im Shop-Service um einen entsprechenden Konstruktor zu generieren.

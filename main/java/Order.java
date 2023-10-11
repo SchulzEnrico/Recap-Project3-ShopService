@@ -2,14 +2,18 @@ import lombok.With;
 
 import java.time.Instant;
 import java.util.List;
+
 @With
 public record Order(
         String id,
         List<Product> products,
         OrderStatus orderStatus,
+
+        //Coding: Bestelldatum
         Instant timeOfOrder
 ) {
-    public Order(String id, List<Product> products, OrderStatus orderStatus) {
+
+   public Order(String id, List<Product> products, OrderStatus orderStatus) {
         this(id, products, orderStatus, null);
     }
 
@@ -19,5 +23,14 @@ public record Order(
 
     public Order(String id, List<Product> products, Instant timeOfOrder) {
         this(id, products, null, timeOfOrder);
+    }
+
+
+
+
+
+    // ToDo Prüfen
+    public Object OrderStatus() {
+        return null;
     }
 }
