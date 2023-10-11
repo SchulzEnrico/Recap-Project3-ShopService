@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import lombok.*;
+@AllArgsConstructor
+@NoArgsConstructor
 
 public class ShopService {
     private ProductRepo productRepo = new ProductRepo();
