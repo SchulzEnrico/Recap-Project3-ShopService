@@ -25,12 +25,4 @@ public record Order(
         this(id, products, null, timeOfOrder);
     }
 
-
-
-
-
-    // ToDo Prüfen
-    public Object OrderStatus() {
-        return null;
-    }
 }

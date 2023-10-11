@@ -58,21 +58,21 @@ Dieser Zeitpunkt soll vor Gericht als Nachweis verwendet werden können, wenn Be
 ## Bonus: in Main Repo festlegen
 [x]
 Erstellt eine Main-Klasse mit main-Methode. In dieser Methode erstellt eine Instanz des Shop-Services.
-
+[x]
 Auch die konkreten Instanzen für OrderRepo und ShopRepo sollen hier in der main-Methode erstellt werden. Übergebt sie dem ShopService-Konstruktor. Nutzt die `@RequiredArgsConstructor`-Annotation im Shop-Service um einen entsprechenden Konstruktor zu generieren.
 
 Legt drei konkrete Bestellungen fest und fügt sie alle dem ShopService hinzu.
 
 ## Bonus: ID-Erstellung
-
+[x]
 Erstellt für die Erstellung einer ID einen `IdService`, der in der Methode `generateId` jeweils eine neue UUID zurückgibt (mithilfe von `java.util.UUID`). Erstellt eine konkrete Implementierung des `IdService` in der main-Methode und übergebt sie dem ShopService-Konstruktor.
 
 ## Bonus: Liegengebliebenes
-
+[x]
 Schreibt eine Methode `getOldestOrderPerStatus`, die eine Map mit dem ältesten Order-Objekt pro Status zurückgibt.
 
 ## Bonus: Transaktions-File
-
+[]
 Lass die Main-Methode eine Datei `transactions.txt` einlesen, in diesem Format:
 ```
 addOrder A 1 2 3
@@ -110,5 +110,5 @@ Setzt den Status einer Bestellung.
 Gibt alle Bestellungen aus.
 
 ## Bonus: Mengenangaben und Lagerbestände
-
+[]
 Fügt eine Mengenangabe zu den Produkten hinzu. Wenn ein Produkt bestellt wird, wird die Menge des Produkts verringert. Wenn ein Produkt nicht mehr auf Lager ist, kann es nicht mehr bestellt werden. Lasse auch Fließkommazahlen zu. Und erweitere die Befehlsverarbeitung mit `transactions.txt` entsprechend.
