@@ -46,33 +46,33 @@ Bearbeitet die Methode 'getProductById' in eurem ProductRepo, sodass sie ein Opt
 Bearbeitet die Methode 'addOrder' im ShopService, sodass eine Exception geworfen wird, wenn das Product nicht vorhanden ist.
 
 ## Coding: Lombok
-[]
+[x]
 Fügt eine 'updateOrder' Methode im ShopService hinzu, die anhand einer orderId und einem neuen Bestellstatus die Order aktualisiert. Nutze dafür Lombok `@With` Annotation.
 
 ## Coding: Bestelldatum
-
+[x]
 Erweitert das Order-Objekt um ein Feld, das den Bestellzeitpunkt speichert. In der 'addOrder' Methode soll dieses Feld mit dem aktuellen Zeitpunkt befüllt werden.
 
 Dieser Zeitpunkt soll vor Gericht als Nachweis verwendet werden können, wenn Besteller\*innen behaupten, die Bestellung gar nicht aufgegeben zu haben. Überlegt Euch, welcher Datentyp dafür am besten geeignet ist - auch wenn Besteller\*innen aus dem Ausland bestellen.
 
 ## Bonus: in Main Repo festlegen
-
+[x]
 Erstellt eine Main-Klasse mit main-Methode. In dieser Methode erstellt eine Instanz des Shop-Services.
-
+[x]
 Auch die konkreten Instanzen für OrderRepo und ShopRepo sollen hier in der main-Methode erstellt werden. Übergebt sie dem ShopService-Konstruktor. Nutzt die `@RequiredArgsConstructor`-Annotation im Shop-Service um einen entsprechenden Konstruktor zu generieren.
 
 Legt drei konkrete Bestellungen fest und fügt sie alle dem ShopService hinzu.
 
 ## Bonus: ID-Erstellung
-
+[x]
 Erstellt für die Erstellung einer ID einen `IdService`, der in der Methode `generateId` jeweils eine neue UUID zurückgibt (mithilfe von `java.util.UUID`). Erstellt eine konkrete Implementierung des `IdService` in der main-Methode und übergebt sie dem ShopService-Konstruktor.
 
 ## Bonus: Liegengebliebenes
-
+[x]
 Schreibt eine Methode `getOldestOrderPerStatus`, die eine Map mit dem ältesten Order-Objekt pro Status zurückgibt.
 
 ## Bonus: Transaktions-File
-
+[]
 Lass die Main-Methode eine Datei `transactions.txt` einlesen, in diesem Format:
 ```
 addOrder A 1 2 3
@@ -110,5 +110,5 @@ Setzt den Status einer Bestellung.
 Gibt alle Bestellungen aus.
 
 ## Bonus: Mengenangaben und Lagerbestände
-
+[]
 Fügt eine Mengenangabe zu den Produkten hinzu. Wenn ein Produkt bestellt wird, wird die Menge des Produkts verringert. Wenn ein Produkt nicht mehr auf Lager ist, kann es nicht mehr bestellt werden. Lasse auch Fließkommazahlen zu. Und erweitere die Befehlsverarbeitung mit `transactions.txt` entsprechend.
